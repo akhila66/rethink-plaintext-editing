@@ -6,7 +6,7 @@ import css from './style.css';
 import TextareaAutosize from 'react-textarea-autosize';
 
 
-function PlaintextEditor({ file, write }) {
+function JavaScriptEditor({ file, write }) {
   
   const [value, setValue] = useState('');
   
@@ -36,9 +36,9 @@ function PlaintextEditor({ file, write }) {
 
 
 
-PlaintextEditor.propTypes = {
+JavaScriptEditor.propTypes = {
   file: PropTypes.object,
   write: PropTypes.func
 };
 
-export default PlaintextEditor;
+export default JavaScriptEditor;

@@ -9,7 +9,8 @@ import { listFiles } from '../files';
 // Used below, these need to be registered
 import MarkdownEditor from '../MarkdownEditor';
 import PlaintextEditor from '../components/PlaintextEditor';
-
+import JavaScriptEditor from '../JavaScriptEditor';
+import JsonEditor from '../JsonEditor';
 import IconPlaintextSVG from '../public/icon-plaintext.svg';
 import IconMarkdownSVG from '../public/icon-markdown.svg';
 import IconJavaScriptSVG from '../public/icon-javascript.svg';
@@ -99,23 +100,32 @@ Previewer.propTypes = {
 
 // Uncomment keys to register editors for media types
 const REGISTERED_EDITORS = {
-  // "text/plain": PlaintextEditor,
-  // "text/markdown": MarkdownEditor,
+  "text/plain": PlaintextEditor,
+  "text/markdown": MarkdownEditor,
+  "text/javascript": JavaScriptEditor,
+  "application/json":JsonEditor,
 };
 
 function PlaintextFilesChallenge() {
   const [files, setFiles] = useState([]);
   const [activeFile, setActiveFile] = useState(null);
 
+
   useEffect(() => {
     const files = listFiles();
     setFiles(files);
+  
   }, []);
 
-  const write = file => {
-    console.log('Writing soon... ', file.name);
-
+  const write = f => {
+    // console.log('Writing soon... ', file, file.name, file.type, file.text(), file.lastModified);
+    //  removing the active file and add updated file with modifined date.
+    // this is not feasible soultion  - good to edit in the same object file and save it back
+    const newList = files.filter((item) => item.name != f.name);
+    setFiles(newList)
+    setFiles((files) => [...files, f])
     // TODO: Write the file to the `files` array
+    
   };
 
   const Editor = activeFile ? REGISTERED_EDITORS[activeFile.type] : null;

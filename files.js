@@ -1,7 +1,7 @@
 export function listFiles() {
   const guide = new File(
     [
-      `The objective is to significantly improve this file browser. Features to think about include: a text editor, markdown and code previews, or file changes persisting across reloads.
+`The objective is to significantly improve this file browser. Features to think about include: a text editor, markdown and code previews, or file changes persisting across reloads.
 
 Install any npm packages or use any third party code you'd like, but please make sure it is clear when you do so.
 
@@ -42,7 +42,7 @@ Thanks for trying our challenge!
   // Here is a markdown file
   const fancy = new File(
     [
-      `# Some Markdown that could be rendered and HTML
+    `# Some Markdown that could be rendered and HTML
 
 The *quick* brown fox, jumped **over** the lazy [dog](https://en.wikipedia.org/wiki/Dog).`
     ],

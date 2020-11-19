@@ -4,12 +4,22 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@uiw/react-markdown-editor": "^2.0.3",
     "@zeit/next-css": "^1.0.1",
     "classnames": "^2.2.6",
     "lodash": "^4.17.19",
-    "next": "^9.5.1",
+    "markdown-it": "^12.0.2",
+    "markdown-parser": "0.0.8",
+    "next": "^9.5.5",
+    "prismjs": "^1.22.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-clear-cache": "^1.4.3",
+    "react-dom": "^16.13.1",
+    "react-markdown": "^5.0.2",
+    "react-markdown-editor": "^0.6.2",
+    "react-markdown-editor-lite": "^1.2.2",
+    "react-textarea-autosize": "^8.3.0",
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
